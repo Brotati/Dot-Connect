@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-regwrapper{
+.regwrapper{
     margin: 10px;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@ regwrapper{
 
 .container{
   position: relative;
-  max-width: 850px;
+  max-width: 400px;
   width: 100%;
   background: #fff;
   padding: 40px 30px;
