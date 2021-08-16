@@ -13,62 +13,62 @@ export default function Rightbar({ profile }) {
               </div>
               <div className="rightbarInfoItem">
                 <span className="rightbarInfoKey">From:</span>
-                <span className="rightbarInfoValue">Madrid</span>
+                <span className="rightbarInfoValue">Bangladesh</span>
               </div>
               <div className="rightbarInfoItem">
-                <span className="rightbarInfoKey">Relationship:</span>
-                <span className="rightbarInfoValue">Single</span>
+                <span className="rightbarInfoKey">Profession:</span>
+                <span className="rightbarInfoValue">Student</span>
               </div>
             </div>
             <h4 className="rightbarTitle">User friends</h4>
             <div className="rightbarFollowings">
               <div className="rightbarFollowing">
                 <img
-                  src="assets/person/1.jpeg"
+                  src="assets/avatar1.png"
                   alt=""
                   className="rightbarFollowingImg"
                 />
-                <span className="rightbarFollowingName">John Carter</span>
+                <span className="rightbarFollowingName">Brotati</span>
               </div>
               <div className="rightbarFollowing">
                 <img
-                  src="assets/person/2.jpeg"
+                  src="assets/avatar2.png"
                   alt=""
                   className="rightbarFollowingImg"
                 />
-                <span className="rightbarFollowingName">John Carter</span>
+                <span className="rightbarFollowingName">Brotati</span>
               </div>
               <div className="rightbarFollowing">
                 <img
-                  src="assets/person/3.jpeg"
+                  src="assets/avatar3.png"
                   alt=""
                   className="rightbarFollowingImg"
                 />
-                <span className="rightbarFollowingName">John Carter</span>
+                <span className="rightbarFollowingName">Brotati</span>
               </div>
               <div className="rightbarFollowing">
                 <img
-                  src="assets/person/4.jpeg"
+                  src="assets/avatar4.png"
                   alt=""
                   className="rightbarFollowingImg"
                 />
-                <span className="rightbarFollowingName">John Carter</span>
+                <span className="rightbarFollowingName">Brotati</span>
               </div>
               <div className="rightbarFollowing">
                 <img
-                  src="assets/person/5.jpeg"
+                  src="assets/avatar5.png"
                   alt=""
                   className="rightbarFollowingImg"
                 />
-                <span className="rightbarFollowingName">John Carter</span>
+                <span className="rightbarFollowingName">Brotati</span>
               </div>
               <div className="rightbarFollowing">
                 <img
-                  src="assets/person/6.jpeg"
+                  src="assets/avatar3.png"
                   alt=""
                   className="rightbarFollowingImg"
                 />
-                <span className="rightbarFollowingName">John Carter</span>
+                <span className="rightbarFollowingName">Brotati</span>
               </div>
             </div>
           </>

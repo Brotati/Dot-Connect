@@ -1,9 +1,8 @@
 import "./profile.css";
-import Header from '../../Components/header/Header'
-import SideBar from '../../Components/siderbar/SideBar'
-import Feed from '../../Components/feed/Feed'
+import Header from "../../Components/header/Header";
+import SideBar from "../../Components/siderbar/SideBar";
+import Feed from "../../Components/feed/Feed";
 import Rightbar from "../../Components/rightbar/Rightbar";
-
 
 export default function Profile() {
   return (
@@ -14,25 +13,17 @@ export default function Profile() {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img
-                className="profileCoverImg"
-                src="assets/2.jpg"
-                alt=""
-              />
-              <img
-                className="profileUserImg"
-                src="assets/5.jpg"
-                alt=""
-              />
+              <img className="profileCoverImg" src="assets/p1.jpg" alt="" />
+              <img className="profileUserImg" src="assets/avatar5.png" alt="" />
             </div>
             <div className="profileInfo">
-                <h4 className="profileInfoName">Safak Kocaoglu</h4>
-                <span className="profileInfoDesc">Hello my friends!</span>
+              <h4 className="profileInfoName">Brotati Katha</h4>
+              <span className="profileInfoDesc">Hello Dot-Connect!</span>
             </div>
           </div>
           <div className="profileRightBottom">
-          <Rightbar profile/>
             <Feed />
+            <Rightbar profile />
           </div>
         </div>
       </div>

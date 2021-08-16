@@ -1,9 +1,10 @@
 import React from "react";
 import "./header.css";
-import SearchIcon  from "@material-ui/icons/Search";
-import PersonIcon from '@material-ui/icons/Person';
-import ChatIcon from '@material-ui/icons/Chat';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+import { Link } from "react-router-dom";
+import SearchIcon from "@material-ui/icons/Search";
+import PersonIcon from "@material-ui/icons/Person";
+import ChatIcon from "@material-ui/icons/Chat";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 
 export default function Header() {
   return (
@@ -19,26 +20,33 @@ export default function Header() {
       </div>
       <div className="HeaderRight">
         <div className="HeaderLinks">
-          <span className="HeaderLink">Home</span>
-          <span className="HeaderLink">TimeLine</span>
+          <Link to="/homepage" style={{ textDecoration: "none" }}>
+            <span className="HeaderLink">Home</span>
+          </Link>
+          <Link to="/profile" style={{ textDecoration: "none" }}>
+            <span className="HeaderLink">Profile</span>
+          </Link>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <span className="HeaderLink">Logout</span>
+          </Link>
         </div>
         <div className="HeaderIcons">
-         <div className="HeaderIconItem">
-             <PersonIcon />
-             <span className="HeaderIconBadge">1</span>
-         </div>
-         <div className="HeaderIconItem">
-             <ChatIcon />
-             <span className="HeaderIconBadge">1</span>
-         </div>
-         <div className="HeaderIconItem">
-             <NotificationsIcon />
-             <span className="HeaderIconBadge">1</span>
-         </div>
+          <div className="HeaderIconItem">
+            <PersonIcon />
+            <span className="HeaderIconBadge">1</span>
+          </div>
+
+          <div className="HeaderIconItem">
+            <ChatIcon />
+            <span className="HeaderIconBadge">1</span>
+          </div>
+          <div className="HeaderIconItem">
+            <NotificationsIcon />
+            <span className="HeaderIconBadge">1</span>
+          </div>
         </div>
-        <img src="/assets/person1.jpg" alt="" className="Header-img"/>
+        <img src="/assets/avatar1.png" alt="" className="Header-img" />
       </div>
     </div>
   );
 }
-

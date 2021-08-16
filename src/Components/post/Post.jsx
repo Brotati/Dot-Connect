@@ -19,7 +19,7 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src="/assets/4.jpg"
+              src="/assets/avatar5.png"
               alt=""
             />
             <span className="postUsername">
@@ -33,7 +33,7 @@ export default function Post({ post }) {
         </div>
         <div className="postCenter">
           <span className="postText">Hey its my 1st post</span>
-          <img className="postImg" src="/assets/4.jpg" alt="" />
+          <img className="postImg" src="/assets/p4.jpg" alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">

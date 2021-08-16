@@ -53,7 +53,9 @@
 .HeaderLink{
     margin-right: 10px;
     font-size: 14px;
+    padding: 5px;
     cursor: pointer;
+    color: white;
 
 }
 .HeaderIcons{
