@@ -15,4 +15,10 @@ class PostController extends Controller
         return $post;
 
     }
+
+     function list()
+    {
+        return Post::all();
+    }
+  
 }

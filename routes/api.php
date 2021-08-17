@@ -24,4 +24,5 @@ Route::middleware(['cors'])->group(function () {
     Route::post('register',[UserController::class,'register']);
     Route::post('login',[UserController::class,'login']);
     Route::post('post',[PostController::class,'post']);
+    Route::get('list',[PostController::class,'list']);
 });
