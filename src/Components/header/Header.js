@@ -1,12 +1,21 @@
 import React from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import PersonIcon from "@material-ui/icons/Person";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 export default function Header() {
+  const user = JSON.parse(localStorage.getItem("user-info"));
+  const history = useHistory();
+
+  function logout() {
+    localStorage.clear();
+    history.push("/register");
+  }
+
+  
   return (
     <div className="HeaderContainer">
       <div className="HeaderLeft">
@@ -26,9 +35,7 @@ export default function Header() {
           <Link to="/profile" style={{ textDecoration: "none" }}>
             <span className="HeaderLink">Profile</span>
           </Link>
-          <Link to="/login" style={{ textDecoration: "none" }}>
-            <span className="HeaderLink">Logout</span>
-          </Link>
+            <span className="HeaderLink" onClick={logout}>Logout</span>
         </div>
         <div className="HeaderIcons">
           <div className="HeaderIconItem">

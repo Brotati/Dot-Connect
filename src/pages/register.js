@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "./register.css";
@@ -9,6 +9,12 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState("");
   const history = useHistory();
+  useEffect(() => {
+    if (localStorage.getItem("user-info")) {
+      history.push("/homepage","/login")
+     
+    }
+  }, []);
 
   async function signup() {
     let item = { name, password, email };
