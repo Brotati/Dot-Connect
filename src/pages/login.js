@@ -1,8 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./login.css";
 
-export default function login() {
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const history = useHistory();
+  useEffect(() => {
+    if (localStorage.getItem("user-info")) {
+      history.push("/homepage");
+    }
+  }, []);
+  async function login() {
+    let item = { email, password };
+    let result = await fetch("http://localhost:8000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(item),
+    });
+    result = await result.json();
+
+    localStorage.setItem("user-info", JSON.stringify(result));
+    history.push("/homepage");
+  }
+
   return (
     <div class="limiter">
       <div class="container-login100">
@@ -16,21 +41,10 @@ export default function login() {
                 <input
                   class="input100"
                   type="text"
-                  name="username"
-                  placeholder="Name"
-                />
-                <span class="focus-input100"></span>
-                <span class="symbol-input100">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </span>
-              </div>
-
-              <div class="wrap-input100 validate-input">
-                <input
-                  class="input100"
-                  type="text"
                   name="usermail"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <span class="focus-input100"></span>
                 <span class="symbol-input100">
@@ -44,6 +58,8 @@ export default function login() {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <span class="focus-input100"></span>
                 <span class="symbol-input100">
@@ -51,11 +67,9 @@ export default function login() {
                 </span>
               </div>
               <div class="container-login100-form-btn">
-               <Link to="/homepage">
-                  <button class="login100-form-btn" type="submit">
-                    Login
-                  </button>
-                  </Link>
+                <button class="login100-form-btn" type="submit" onClick={login}>
+                  Login
+                </button>
               </div>
 
               <div class="text-center p-t-12">

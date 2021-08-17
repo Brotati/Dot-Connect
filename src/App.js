@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import { BrowserRouter, Route } from "react-router-dom";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Protected from "./Protected"
 
@@ -17,7 +17,7 @@ export default function App() {
           <Protected Cmp={Profile} />
         </Route>
         <Route path="/login">
-          <Login />
+        <Login />
         </Route>
         <Route path="/register">
           <Register />

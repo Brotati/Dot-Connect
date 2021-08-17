@@ -14,7 +14,6 @@ export default function Header() {
     localStorage.clear();
     history.push("/register");
   }
-
   
   return (
     <div className="HeaderContainer">

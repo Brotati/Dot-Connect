@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import "./register.css";
 
 export default function Register() {
@@ -11,7 +10,7 @@ export default function Register() {
   const history = useHistory();
   useEffect(() => {
     if (localStorage.getItem("user-info")) {
-      history.push("/homepage","/login")
+      history.push("/login")
      
     }
   }, []);

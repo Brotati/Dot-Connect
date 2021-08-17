@@ -1,15 +1,36 @@
 import "./share.css";
+import React, { useState } from "react";
 import {PermMedia, Label,Room, EmojiEmotions} from "@material-ui/icons"
 
 export default function Share() {
+  const [post, setPost] = useState("");
+  const [file, setFile] = useState("");
+  const [errors, setErrors] = useState("");
+  
+  async function Post() {
+    const formdata = new FormData();
+    setErrors("Post Shared");
+    formdata.append("file", file);
+    formdata.append("post", post);
+    
+    let result = await fetch("http://localhost:8000/api/post", {
+      method: "POST",
+      body: formdata,
+    });
+    
+  }
+  
   return (
     <div className="share">
+       <h2 style={{ color: "Green" }}>{errors}</h2>
       <div className="shareWrapper">
         <div className="shareTop">
           <img className="shareProfileImg" src="/assets/avatar5.png" alt="" />
           <input
             placeholder="Share your idea Brotati?"
             className="shareInput"
+            value={post}
+            onChange={(e)=> setPost(e.target.value)}
           />
         </div>
         <hr className="shareHr"/>
@@ -17,7 +38,7 @@ export default function Share() {
             <div className="shareOptions">
                 <div className="shareOption">
                     <PermMedia htmlColor="tomato" className="shareIcon"/>
-                    <span className="shareOptionText">Photo or Video</span>
+                    <input className="shareOptionText" type="file" onChange={(e)=> setFile(e.target.files[0])}/>Photo or Video
                 </div>
                 <div className="shareOption">
                     <Label htmlColor="blue" className="shareIcon"/>
@@ -32,7 +53,7 @@ export default function Share() {
                     <span className="shareOptionText">Feelings</span>
                 </div>
             </div>
-            <button className="shareButton">Share</button>
+            <button className="shareButton" onClick={Post}>Share</button>
         </div>
       </div>
     </div>
