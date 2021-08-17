@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Protected from "./Protected"
+import Post from "./Components/post/Post";
 
 export default function App() {
   return (

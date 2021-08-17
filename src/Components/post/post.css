@@ -76,3 +76,10 @@
       border-bottom: 1px dashed gray;
       font-size: 15px;
   }
+  .delete{
+    color: white;
+    background-color: #30336b;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+  }

@@ -1,5 +1,6 @@
 import "./share.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {PermMedia, Label,Room, EmojiEmotions} from "@material-ui/icons"
 
 export default function Share() {
@@ -53,7 +54,9 @@ export default function Share() {
                     <span className="shareOptionText">Feelings</span>
                 </div>
             </div>
+            <Link to="/homepage">
             <button className="shareButton" onClick={Post}>Share</button>
+            </Link>
         </div>
       </div>
     </div>
